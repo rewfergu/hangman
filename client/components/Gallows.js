@@ -65,7 +65,7 @@ export default class Gallows extends React.Component {
           wireframeBackground: '#222',
           hasBounds: false,
           enabled: true,
-          wireframes: false,
+          wireframes: true,
           showSleeping: true,
           showDebug: false,
           showBroadphase: false,
@@ -183,7 +183,7 @@ export default class Gallows extends React.Component {
       render: {
         fillStyle: 'white',
         strokeStyle: 'white',
-        visible: false,
+        visible: true,
         lineWidth: 2,
       },
       stiffness: 0.5,
