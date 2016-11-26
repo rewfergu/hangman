@@ -1,8 +1,11 @@
 .gallows{
     min-height: 400px;
-    margin: 0 -30px 0 -30px;
-    position: relative;
+    // margin: 0 -30px 0 -30px;
+    position: absolute;
     z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 #gallowStructure {

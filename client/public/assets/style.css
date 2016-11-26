@@ -41,6 +41,9 @@ h3 {
   padding-bottom: 10px;
   /*border-bottom: 1px solid #ccc;*/ }
 
+.room {
+  position: relative; }
+
 footer {
   text-align: center;
   padding: 20px 0; }
@@ -197,9 +200,6 @@ footer img {
 .container {
   max-width: 1050px; }
 
-.gameBoard {
-  overflow: hidden; }
-
 .players {
   overflow: hidden; }
 
@@ -207,48 +207,6 @@ footer img {
   float: left;
   height: 400px;
   overflow: scroll; }
-
-.player {
-  border: black solid 1px;
-  border-radius: 5px;
-  padding: 4px 1px;
-  margin: 3px;
-  float: left; }
-
-.remainingGuess {
-  font-size: 24px; }
-
-.remainText {
-  font-size: 24px; }
-
-.remainNumber {
-  font-size: 24px; }
-
-.wordLetters {
-  font-size: 36px; }
-
-.wordLetter {
-  font-size: 24px; }
-
-#theword-row {
-  margin: 100px auto 60px; }
-
-#guessed-row {
-  text-align: left;
-  margin-left: 20%; }
-
-.wordLetters {
-  text-align: center; }
-
-.wordLetter {
-  display: inline-block;
-  font-size: 100%;
-  width: 1em;
-  margin: 0px; }
-
-.guessedLetters, .remainingGuess {
-  text-align: left;
-  font-size: 24px; }
 
 .guessedLetter {
   color: red; }
@@ -275,31 +233,64 @@ footer img {
   outline: 0;
   opacity: 1; }
 
-h1.game-title {
-  background-color: #c33;
-  color: white; }
+.player {
+  max-width: 500px;
+  margin: 0 auto; }
 
-#player-col, #board-col {
-  padding-top: 25px; }
-
-.board-col {
-  margin-top: 25px; }
+.board {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-size: 24px; }
 
 .board__roomName {
   font-size: 100px;
   color: #b7aaa1;
   text-transform: uppercase;
-  position: absolute;
-  top: -412px;
-  left: 0;
-  word-break: break-all;
-  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
+  word-break: break-word;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  min-height: 400px; }
+
+.board__playerName {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 5px 0; }
+
+.board__remainingGuess {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 5px 0; }
+
+.board__guessedLetters {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 5px 0; }
+
+.board__wordLetters {
+  font-size: 36px;
+  margin: 20px 0; }
+  .board__wordLetters .wordLetter {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 5px 0;
+    margin: 5px;
+    min-width: 4rem;
+    display: inline-block;
+    border-radius: 5px; }
 
 .gallows {
   min-height: 400px;
-  margin: 0 -30px 0 -30px;
-  position: relative;
-  z-index: 999; }
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  top: 0; }
 
 #gallowStructure {
   stroke: #666;
