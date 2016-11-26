@@ -10,7 +10,7 @@ export default class Alphabets extends React.Component {
 
   render() {
     return (
-      <div className="alphabets">
+      <div className="board__alphabets">
         {
           this.alphabets.map((letter, index) => {
             const guessed = this.props.guessedLetters.includes(letter);

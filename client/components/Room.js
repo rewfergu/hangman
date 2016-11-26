@@ -132,9 +132,7 @@ export default class Room extends React.Component {
     console.log('total players', this.state.totalPlayers);
     if (this.state.totalPlayers === 1) {
       return (
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12">
+
               <Player1
                 word={this.state.displayWord}
                 guessedLetters={guessedLettersUpper}
@@ -145,9 +143,7 @@ export default class Room extends React.Component {
                 makeGuess={e => this.makeGuess(e)}
                 roomName={this.state.roomName}
               />
-            </div>
-          </div>
-        </div>
+
       );
     } else {
       return (

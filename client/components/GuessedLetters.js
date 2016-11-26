@@ -7,10 +7,14 @@ export default class GuessedLetters extends React.Component {
 
   render() {
     return (
-      <div className="guessedLetters"> Letters Guessed: {
-        this.props.guessedLetters.map((letter, index) =>
-          <span key={index} className="guessedLetter" > { letter }</span>
-        )}
+      <div className="board__guessedLetters">
+        <div>Letters Guessed:</div>
+        <div>
+          {
+          this.props.guessedLetters.map((letter, index) =>
+            <span key={index} className="guessedLetter" > { letter }</span>
+          )}
+        </div>
       </div>
     );
   }

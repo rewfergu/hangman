@@ -6,14 +6,14 @@ body {
   font-family: 'IM Fell English', 'Ubuntu', sans-serif;
   background: #751d1d;
   /* Old browsers */
-  background: linear-gradient(180deg, #e88484 0%, #330e0e 100%), url("/assets/debut_dark.png");
+  background: linear-gradient(180deg, #e88484 0%, #330e0e 100%), url(debut_dark.png);
   background-blend-mode: difference;
   font-size: 16px; }
 
 main {
   background: #fcfcfc;
   /* Old browsers */
-  background: linear-gradient(135deg, #a09792 0%, #927e72 100%), url("/assets/debut_dark.png");
+  background: linear-gradient(135deg, #a09792 0%, #927e72 100%), url(debut_dark.png);
   padding: 0 0 50px;
   background-blend-mode: difference; }
 
@@ -40,9 +40,6 @@ h3 {
   margin-top: 2px;
   padding-bottom: 10px;
   /*border-bottom: 1px solid #ccc;*/ }
-
-.room {
-  position: relative; }
 
 footer {
   text-align: center;
@@ -163,7 +160,7 @@ footer img {
   margin: 0;
   padding: 0;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
-  background: linear-gradient(135deg, #9e3d3d 0%, #752424 100%), url("/assets/debut_dark.png");
+  background: linear-gradient(135deg, #9e3d3d 0%, #752424 100%), url(debut_dark.png);
   background-blend-mode: difference; }
 
 .menu__list {
@@ -200,6 +197,9 @@ footer img {
 .container {
   max-width: 1050px; }
 
+.gameBoard {
+  overflow: hidden; }
+
 .players {
   overflow: hidden; }
 
@@ -207,6 +207,48 @@ footer img {
   float: left;
   height: 400px;
   overflow: scroll; }
+
+.player {
+  border: black solid 1px;
+  border-radius: 5px;
+  padding: 4px 1px;
+  margin: 3px;
+  float: left; }
+
+.remainingGuess {
+  font-size: 24px; }
+
+.remainText {
+  font-size: 24px; }
+
+.remainNumber {
+  font-size: 24px; }
+
+.wordLetters {
+  font-size: 36px; }
+
+.wordLetter {
+  font-size: 24px; }
+
+#theword-row {
+  margin: 100px auto 60px; }
+
+#guessed-row {
+  text-align: left;
+  margin-left: 20%; }
+
+.wordLetters {
+  text-align: center; }
+
+.wordLetter {
+  display: inline-block;
+  font-size: 100%;
+  width: 1em;
+  margin: 0px; }
+
+.guessedLetters, .remainingGuess {
+  text-align: left;
+  font-size: 24px; }
 
 .guessedLetter {
   color: red; }
@@ -233,64 +275,31 @@ footer img {
   outline: 0;
   opacity: 1; }
 
-.player {
-  max-width: 500px;
-  margin: 0 auto; }
+h1.game-title {
+  background-color: #c33;
+  color: white; }
 
-.board {
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: center;
-  color: #fff;
-  font-size: 24px; }
+#player-col, #board-col {
+  padding-top: 25px; }
+
+.board-col {
+  margin-top: 25px; }
 
 .board__roomName {
   font-size: 100px;
   color: #b7aaa1;
   text-transform: uppercase;
-  word-break: break-word;
-  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  min-height: 400px; }
-
-.board__playerName {
-  font-size: 24px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
-  padding: 5px 0; }
-
-.board__remainingGuess {
-  font-size: 24px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
-  padding: 5px 0; }
-
-.board__guessedLetters {
-  font-size: 24px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
-  padding: 5px 0; }
-
-.board__wordLetters {
-  font-size: 36px;
-  margin: 20px 0; }
-  .board__wordLetters .wordLetter {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 5px 5px 0;
-    margin: 5px;
-    min-width: 4rem;
-    display: inline-block;
-    border-radius: 5px; }
+  position: absolute;
+  top: -412px;
+  left: 0;
+  word-break: break-all;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
 
 .gallows {
   min-height: 400px;
-  position: absolute;
-  z-index: 999;
-  left: 0;
-  right: 0;
-  top: 0; }
+  margin: 0 -30px 0 -30px;
+  position: relative;
+  z-index: 999; }
 
 #gallowStructure {
   stroke: #666;

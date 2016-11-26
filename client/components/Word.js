@@ -12,7 +12,7 @@ export default class Word extends React.Component {
 
   render() {
     return (
-      <div className="wordLetters">
+      <div className="board__wordLetters">
         {
           this.props.word.map((elem, index) => {
             let result = '_';

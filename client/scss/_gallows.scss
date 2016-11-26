@@ -1,0 +1,40 @@
+.gallows{
+    min-height: 400px;
+    // margin: 0 -30px 0 -30px;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#gallowStructure {
+    stroke: #666;
+    stroke-width: 20;
+}
+
+#gallowRope {
+    stroke: #666;
+    stroke-width: 8;
+}
+
+#gallowRope circle {
+    fill: white;
+}
+
+#gallowMan line {
+    stroke: #c33;
+    stroke-width: 12;
+}
+
+#gallowMan circle {
+    fill: #c33;
+}
+
+#gallowMan .op-on {
+    opacity: 1;
+}
+
+#gallowMan .op-off {
+    opacity: 0;
+}

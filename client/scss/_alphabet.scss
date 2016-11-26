@@ -1,0 +1,21 @@
+.alphabets {
+    max-width: 330px;
+    margin: 40px auto;
+}
+
+.alphabet{
+    text-align: center;
+	display: inline-block;
+    border-radius: 5px;
+    background-color: #CC3333;
+    color: white;
+    padding: 4px 1px; 
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+}
+
+.alphabet-guessed{
+	background-color: #666666;
+    color: #999999;
+}

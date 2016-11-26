@@ -1,0 +1,68 @@
+$maxWidth: 800px;
+$debutDark: '/assets/debut_dark.png';
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: 'IM Fell English', 'Ubuntu', sans-serif;
+    background: #751d1d; /* Old browsers */
+    background: linear-gradient(180deg, #e88484 0%,#330e0e 100%), url($debutDark);
+    background-blend-mode: difference;
+    font-size: 16px;
+}
+
+main {
+    background: #fcfcfc; /* Old browsers */
+    background: linear-gradient(135deg, hsla(21, 7%, 60%, 1) 0%,hsla(22, 13%, 51%, 1) 100%), url($debutDark);
+    padding: 0 0 50px;
+    background-blend-mode: difference;
+}
+
+
+
+
+/*div {
+    text-align: center;
+}*/
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    font-size: 25px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h3 {
+    color: #fff;
+}
+
+.panel {
+    padding: 30px;
+}
+
+.panel h1, .panel h2 {
+    margin-top: 2px;
+    padding-bottom: 10px;
+    /*border-bottom: 1px solid #ccc;*/
+}
+
+.room {
+    position: relative;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer img {
+    width: 100px;
+}

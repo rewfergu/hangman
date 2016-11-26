@@ -38,7 +38,7 @@ export default class Player2 extends React.Component {
     return (
       <section id="player2" className="row">
         <div className="col-sm-8">
-          <div className="panel panel-default board-col">
+          <div className="board-col">
             <h1>Player 2</h1>
             <div id="guessed-row">
               <GuessedLetters guessedLetters={guessedLettersUpper} />

@@ -1,0 +1,174 @@
+.coolDown{
+    border: 1px solid black;
+    background: #EEEEEE;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#cooldown-text {
+    height: 20px;
+}
+
+.container {
+    max-width: 1050px;
+}
+
+.room{
+}
+
+.players{
+    overflow:hidden;
+}
+
+#player-table {
+    float: left;
+    height: 400px;
+    overflow: scroll;
+}
+
+
+
+
+
+// .wordLetters {
+//     font-size: 36px;
+// }
+
+// .wordLetter {
+//     font-size: 24px;
+// }
+
+
+
+// #theword-row {
+//     margin: 100px auto 60px;
+// }
+
+// #guessed-row {
+//     text-align: left;
+//     margin-left: 20%;
+// }
+
+// .wordLetters{
+//     text-align: center;
+// }
+
+// .wordLetter{
+// 	display: inline-block;
+//     font-size: 100%;
+//     width: 1em;
+//     margin: 0px;
+// }
+
+// .guessedLetters, .remainingGuess {
+//     text-align: left;
+//     font-size: 24px;
+// }
+
+.guessedLetter {
+    color: red;
+}
+
+.outcome-outline{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: grey;
+    opacity: 0.7;
+}
+
+.outcome{
+    text-align: center;
+    display: block;
+    font-size: 5em;
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    opacity: 1;
+}
+
+
+
+
+
+// h1.game-title {
+//     background-color: #c33;
+//     color: white;
+// }
+
+// #player-col, #board-col {
+//     padding-top: 25px;
+// }
+
+// .board-col {
+//     margin-top: 25px;
+// }
+.player {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.board {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+.board__roomName {
+    font-size: 100px;
+    color: #b7aaa1;
+    text-transform: uppercase;
+    // position: absolute;
+    // top: -412px;
+    // left: 0;
+    word-break: break-word;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    min-height: 400px;
+}
+
+.board__playerName {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    padding: 5px 0;
+}
+
+.board__remainingGuess {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    padding: 5px 0;
+}
+
+.board__guessedLetters {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    padding: 5px 0;
+}
+
+.board__wordLetters {
+    font-size: 36px;
+    margin: 20px 0;
+    .wordLetter {
+        background: rgba(0, 0, 0, 0.3);
+        padding: 5px 5px 0;
+        margin: 5px;
+        min-width: 4rem;
+        display: inline-block;
+        border-radius: 5px;
+    }
+}
+
+.board__alphabets {}    

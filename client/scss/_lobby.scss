@@ -1,0 +1,132 @@
+.welcome {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.roomHeading {
+    
+}
+
+.roomList {
+    padding: 0;
+    list-style: none;
+}
+
+.roomList__item {
+    /*background: white;*/
+    /*border: 1px solid black;*/
+    padding: 10px 0px;
+    margin: 5px 0px 5px 0px;
+    text-align: left;
+    color: #fff;
+    font-size: 2rem;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.roomList__name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-list-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: mycounter;
+}
+
+.user-list-item li {
+    padding: 5px 5px 5px 5px;
+    margin: 5px 0px 5px 0px;
+    text-align: left;
+    border-bottom: 1px dashed rgba(255,255,255,0.3);
+}
+
+.leaderboard {
+    color: #fff;
+}
+
+.leaderboard-header {
+    display:flex;
+    justify-content: space-between;
+}
+
+.leaderboard-header-name {
+    display: inline-block;
+    padding-left: 17px;
+}
+
+.leaderboard-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items:stretch;
+}
+
+.leaderboard-item:before {
+    content: counter(mycounter);
+    counter-increment: mycounter;
+    color: rgba(255, 255, 255, 0.3);
+    line-height: 2rem;
+}
+
+.leaderboard-name {
+    display: block;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.leaderboard-score {
+    display: block;
+    text-align: right;
+    flex-grow: 1;
+    text-align: right;
+    font-size: 2rem;
+    line-height: 1.5rem;
+}
+
+.leaderboard-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items:stretch;
+}
+
+.leaderboard-item:before {
+    content: counter(mycounter);
+    counter-increment: mycounter;
+}
+
+.leaderboard-name {
+    display: block;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.leaderboard-score {
+    display: block;
+    text-align: right;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.users {
+    font-style:bold;
+}
+
+
+.createGame-button {
+    display: block;
+    width: 50%;
+    margin: 0 auto 20px;
+    text-transform: uppercase;
+}
+
+.join-game {
+    text-align: right;
+}
+
+.join-button {
+    color: #222;
+    text-transform: uppercase;
+}
