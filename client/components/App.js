@@ -46,10 +46,10 @@ export default class App extends React.Component {
       } else if (totalPlayers === 2 && playerList.length < 2 && !playerList.includes(currentUserId)) {
         this.serverAPI.addPlayer(currentUserId, roomId)
         .then(() => {
-          this.setState({
-            play: true,
-            pageToRender: <Room returnToLobby={e => this.handleLobbyClick(e)} serverAPI={this.serverAPI} roomId={roomId} username={this.state.username} />,
-          });
+        this.setState({
+          play: true,
+          pageToRender: <Room returnToLobby={e => this.handleLobbyClick(e)} serverAPI={this.serverAPI} roomId={roomId} username={this.state.username} />,
+        });
         });
       }
     });
@@ -65,19 +65,19 @@ export default class App extends React.Component {
 
   checkSession() {
     return firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        console.log("auth", user);
-        var displayName = this.createUsername(user.email)
-        this.setState({
-          auth: true,
-          username: displayName,
-          pageToRender: <FrontLobby serverAPI={this.serverAPI} username={displayName} joinRoom={e => this.handleJoin(e)} />,
-        });
-      } else {
-        this.setState({
-          pageToRender: <Login handleLogin={e => this.handleLogin(e)} />,
-        });
-      }
+    if (user) {
+      console.log("auth", user);
+      var displayName = this.createUsername(user.email);
+      this.setState({
+        auth: true,
+        username: displayName,
+        pageToRender: <FrontLobby serverAPI={this.serverAPI} username={displayName} joinRoom={e => this.handleJoin(e)} />,
+      });
+    } else {
+      this.setState({
+        pageToRender: <Login handleLogin={e => this.handleLogin(e)} />,
+      });
+    }
     });
   }
 
@@ -98,29 +98,27 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <nav className="navbar navbar-static-top">
-          <div className="container navcon">
-            <ul className="nav navbar-header navbar-nav">
-              <li className="navbar-brand">HANGMAN</li>
-              <li><a onClick={e => this.handleLobbyClick(e)}>Lobby</a></li>
-            </ul>
 
-            <ul className="nav navbar-nav navbar-right">
-              <li>
-                <a onClick={() => firebase.auth().signOut()}>Sign Out</a>
-              </li>
-            </ul>
-          </div>
+        <nav className="menu">
+          <ul className="menu__list">
+            <li className="menu__title">
+              HANGMAN
+            </li>
+            <li className="menu__item">
+              <a onClick={e => this.handleLobbyClick(e)}>Lobby</a>
+            </li>
+            <li className="menu__item">
+              <a onClick={() => firebase.auth().signOut()}>Sign Out</a>
+            </li>
+          </ul>
         </nav>
+
         <main>
-        {
-          this.state.pageToRender
-        }
+          { this.state.pageToRender }
         </main>
+
         <footer>
-          <div className="container">
-            <img src="assets/duck.svg" />
-          </div>
+          <img src="assets/duck.svg" alt="rubber duckies" />
         </footer>
       </div>
     );

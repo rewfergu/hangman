@@ -28,25 +28,21 @@ export default class Player1 extends React.Component {
           <Gallows remainingGuesses={this.props.remainingGuesses} />
         </div>
         <div className="col-sm-8">
-          <div className="panel panel-default board-col">
-            <h1>Player 1:  {this.props.username}</h1>
-            <h2>Game:  {this.props.roomName}</h2>
-            <div id="guessed-row">
+          <div className="board">
+            <h1 className="board__roomName">{this.props.roomName}</h1>
+            <div className="board__playerName">Player 1:  {this.props.username}</div>
+            <div id="guessed-row" className="board__letters">
               <GuessedLetters guessedLetters={guessedLettersUpper} />
               <RemainingGuess remainingGuesses={this.props.remainingGuesses} />
-            </div>
-            <div id="theword-row">
               <Word word={this.props.word} />
             </div>
-            <div id="alphabet-row">
-              <Alphabets
-                guessedLetters={guessedLettersUpper}
-                coolDown={this.props.coolDown}
-                serverAPI={this.props.serverAPI}
-                makeGuess={this.props.makeGuess}
-              />
-            </div>
           </div>
+          <Alphabets
+            guessedLetters={guessedLettersUpper}
+            coolDown={this.props.coolDown}
+            serverAPI={this.props.serverAPI}
+            makeGuess={this.props.makeGuess}
+          />
         </div>
       </section>
     );

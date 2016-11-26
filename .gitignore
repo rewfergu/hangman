@@ -5,3 +5,4 @@ firebaseConfig.js
 client/.DS_Store
 client/public/.DS_Store
 client/public/assets/.DS_Store
+.sass-cache/

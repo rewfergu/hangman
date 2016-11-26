@@ -13,7 +13,8 @@
     "start": "nodemon ./server/main.js --ignore client/",
     "test": "NODE_ENV=test ./node_modules/.bin/mocha",
     "fe-test": "mocha --reporter=nyan",
-    "testgame": "NODE_ENV=test ./node_modules/.bin/mocha --bail test/server/ServerSpec.js"
+    "testgame": "NODE_ENV=test ./node_modules/.bin/mocha --bail test/server/ServerSpec.js",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base build"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,7 @@
     "eslint": "^3.4.0",
     "express": "^4.13.4",
     "firebase": "^3.3.0",
+    "matter-js": "^0.11.1",
     "nodemon": "^1.10.2",
     "random-words": "0.0.1",
     "react": "^15.1.0",
@@ -45,11 +47,14 @@
     "react-dom": "^15.1.0",
     "react-keydown": "^1.6.2",
     "socket.io": "^1.4.8",
-    "socket.io-client": "^1.4.8"
+    "socket.io-client": "^1.4.8",
+    "webpack": "^1.13.3"
   },
   "devDependencies": {
+    "babel-loader": "^6.2.8",
     "chai": "^3.5.0",
     "chai-enzyme": "^0.5.0",
+    "css-loader": "^0.26.0",
     "enzyme": "^2.4.1",
     "eslint": "^3.4.0",
     "eslint-config-airbnb": "^10.0.1",
@@ -58,6 +63,11 @@
     "eslint-plugin-react": "^6.2.0",
     "jsdom": "^9.4.1",
     "mocha": "^3.0.2",
-    "sinon": "^1.17.5"
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2",
+    "sinon": "^1.17.5",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }

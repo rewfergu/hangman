@@ -102,23 +102,18 @@ export default class FrontLobby extends React.Component {
 
   showListOfRooms() {
     return (
-      <ul className="room-list-item">
+      <ul className="roomList">
         {
           this.state.roomsList.map((room, index) =>
-            <li key={index} className="row">
-              <div className="col-sm-8">
-                {`room: ${room.name}`}
-                <br />
-                {`type: ${room.totalPlayers === 1 ? 'Single Player' : 'Head To Head'}`}
-                <br />
-                {`# of players: ${Object.keys(room.players).length}`}
-                <br />
-              </div>
-              <div className="col-sm-4 join-game">
-                <button className="btn join-button" onClick={() => this.handleJoinRoom(room.id)} >
-                  Join
-                </button>
-              </div>
+            <li key={index} className="roomList__item">
+                <div className="roomList__name">
+                  <span>{`Name: ${room.name}`}</span>
+                  <button className="btn join-button" onClick={() => this.handleJoinRoom(room.id)} >Join Room</button>
+                </div>
+                
+                <div>{`Type: ${room.totalPlayers === 1 ? 'Single Player' : 'Head To Head'}`}</div>
+                
+                <div>{`Players: ${Object.keys(room.players).length}`}</div>
             </li>
             )
         }
@@ -128,7 +123,7 @@ export default class FrontLobby extends React.Component {
 
   showUserScoreboard() {
     return (
-      <ol className="user-list-item">
+      <ol className="leaderboard user-list-item">
         <li>
         <div className="leaderboard-header">
           <span className="leaderboard-header-name">Name</span>
@@ -161,21 +156,20 @@ export default class FrontLobby extends React.Component {
         { this.showCreateGame() }
         <div className="container">
           <h1 className="welcome">Welcome to Hangman, {this.props.username}!</h1>
+            <button
+              id="new-game"
+              className="btn createGame-button"
+              onClick={e => this.handleCreate(e)}
+            >
+              Create Room
+            </button>
           <div className="row">
-            <div className="col-sm-3">
-              <div>
-                <button
-                  id="new-game"
-                  className="btn createGame-button"
-                  onClick={e => this.handleCreate(e)}
-                >
-                  Create Game
-                </button>
-              </div>
-              <h4>Leaderboard</h4>
+            <div className="col-sm-4">
+              <h2>Leaderboard</h2>
               {this.showUserScoreboard()}
             </div>
-            <div className="col-sm-9">
+            <div className="col-sm-8">
+              <h2 className="roomHeading">Rooms</h2>
               {this.showListOfRooms()}
             </div>
           </div>
